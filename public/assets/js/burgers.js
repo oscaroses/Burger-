@@ -14,19 +14,20 @@ $(document).ready(function () {
         }).then(
             function () {
                 console.log("created new burger");
-                // Reload the page to get the updated list
                 location.reload();
             }
         );
     });
 
     $(".devour-btn").on("click", function () {
-        console.log("hi");
         var id = $(this).attr("data-burger");
+        var devBurger = {
+            devoured: 1
+        };
 
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
-            devoured: true
+            data: devBurger
         }).then(
             function () {
                 console.log("you ate the burger!");
@@ -34,5 +35,4 @@ $(document).ready(function () {
             }
         );
     })
-
 });
