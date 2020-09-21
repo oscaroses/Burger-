@@ -1,5 +1,3 @@
-![GitHub](https://img.shields.io/badge/license-MIT_License-green)
-
 # Burger Time
 
 ## Description
